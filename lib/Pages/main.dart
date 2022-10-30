@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_frontend/Pages/AuthPage.dart';
 import 'package:flutter_frontend/Pages/botHello.dart';
+import 'package:flutter_frontend/Pages/mainPage.dart';
 import 'package:flutter_frontend/Pages/navigation_bar.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: BotHelloScreen(),
+      home: NavigationBarScreen(),
     );
   }
 }

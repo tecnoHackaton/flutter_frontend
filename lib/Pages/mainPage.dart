@@ -16,6 +16,7 @@ class MainPageScreenState extends State<MainPageScreen> {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset('assets/logo.png'),
           Text('Услуги'),
@@ -57,7 +58,7 @@ class MainPageScreenState extends State<MainPageScreen> {
                 child: Container(
                   width: 160,
                   height: 100,
-                  child: Text('Вызов сантехника', style: TextStyle(
+                  child: Text('Заказать еду', style: TextStyle(
                       fontSize: 12
                   ),),
                   decoration: BoxDecoration(
@@ -71,23 +72,25 @@ class MainPageScreenState extends State<MainPageScreen> {
                 child: Container(
                   width: 160,
                   height: 100,
-                  child: Text('Вызов сантехника', style: TextStyle(
+                  child: Text('Парковка', style: TextStyle(
                       fontSize: 12
                   ),),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/food.png')
+                          image: AssetImage('assets/cars.png')
                       )
                   ),
                 ),
               ),
             ],
           ),
+          SizedBox(
+            height: 40,
+          ),
           Text('Информация о ЖК “Династия”'),
-          Text('В проекте совмещены новый уровень\n качества жизни и прекрасная архитектура,\n заслуженно признанная классической.\n Архитектурный облик комплекса органично\n и целостно вписался в экстерьер городского центра, дополнив его собственной инфраструктурой. Спроектированный в виде европейского квартала, жилой комплекс «Династия» открывает в Ярославле зону высокого качества жизни.')
-
-        ]
-      )
+          Text('В проекте совмещены новый уровень\n качества жизни и прекрасная архитектура,\n заслуженно признанная классической.\n Архитектурный облик комплекса органично\n и целостно вписался в экстерьер городского центра, дополнив его собственной инфраструктурой. Спроектированный в виде европейского квартала, жилой комплекс «Династия» открывает в Ярославле зону высокого качества жизни.',
+          textAlign: TextAlign.start,),
+      ])
     );
   }
 }
