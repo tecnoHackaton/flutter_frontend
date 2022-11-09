@@ -21,6 +21,9 @@ class ProfilePageScreenState extends State<ProfilePageScreen> {
             backgroundImage: AssetImage('assets/avatar.png'),
           ),
         ),
+        SizedBox(
+          height: 15,
+        ),
         Text(
           'Данила Лебедев',
           style: TextStyle(fontSize: 20),
@@ -51,23 +54,6 @@ class ProfilePageScreenState extends State<ProfilePageScreen> {
             ),
           ),
         ),
-    ListView(
-      children: const <Widget>[
-      Card(
-    child: ListTile(
-    title: Text('Личные данные'),
-    trailing: Icon(Icons.arrow_back),
-    ),
-    ),
-        Card(
-          child: ListTile(
-            title: Text('Информация'),
-            trailing: Icon(Icons.arrow_back),
-          ),
-        ),
-    ],
-    ),
-
       ],
     ));
   }
