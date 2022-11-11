@@ -28,6 +28,7 @@ class NavigationBarScreenState extends State<NavigationBarScreen> {
         body: Stack(
           children: [
             PageView(
+              physics: NeverScrollableScrollPhysics(),
               controller: page,
               children: [
                 MainPageScreen(),
