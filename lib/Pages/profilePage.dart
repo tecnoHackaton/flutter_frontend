@@ -54,6 +54,28 @@ class ProfilePageScreenState extends State<ProfilePageScreen> {
             ),
           ),
         ),
+        SizedBox(height: 20,),
+        Container(
+          child: InkWell(
+            onTap: () {},
+            child: Container(
+              child: Align(
+                alignment: Alignment.center,
+                child: Text(
+                  "Изменить дворецкого",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              height: 40,
+              width: 200,
+              decoration: BoxDecoration(
+                  color: Colors.grey, borderRadius: BorderRadius.circular(80)),
+            ),
+          ),
+        ),
       ],
     ));
   }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_frontend/Pages/PaymentPage.dart';
+import 'package:flutter_frontend/Pages/botHello.dart';
 
 class MainPageScreen extends StatefulWidget {
   const MainPageScreen({Key? key}) : super(key: key);
@@ -30,6 +32,11 @@ class MainPageScreenState extends State<MainPageScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GestureDetector(
+                  onTap: (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const PaymentPage()));
+                  },
                   child: Container(
                     width: 160,
                     height: 100,
@@ -148,10 +155,22 @@ class MainPageScreenState extends State<MainPageScreen> {
               ),
             ),
           ]),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
+      floatingActionButton: Padding(
+        padding: EdgeInsets.only(bottom: 70),
+        child: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => BotHelloScreen()));
+          },
+          child: CircleAvatar(
+            radius: 50,
+            backgroundImage: AssetImage("assets/croppedVroid.png",
+    ),
+        ),
       ),
+      )
+
     );
   }
 }

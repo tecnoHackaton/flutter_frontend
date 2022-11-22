@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_frontend/Pages/navigation_bar.dart';
 
 class PaymentPage extends StatefulWidget {
   const PaymentPage({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ Widget _paymentWindow(String _address, String _name, String _cost, String _month
             children: [
               Padding(
                 padding: EdgeInsets.only(left:5, top: 5),
-                child: Text('$_name', style: TextStyle(fontSize:30)),
+                child: Text('Квартира 28', style: TextStyle(fontSize:30)),
               ),
             ],
           ),
@@ -40,14 +41,14 @@ Widget _paymentWindow(String _address, String _name, String _cost, String _month
           Row(
             children: [
               Icon(Icons.place_outlined),
-              Text('$_address')
+              Text('Ярославль, Угличская ул. д. 15')
             ],
           ),
           SizedBox(height: 10),
           Row(
             children: [
               Icon(Icons.money_rounded),
-              Text('Квитанция за $_month'),
+              Text('Квитанция за сентябрь'),
               Padding(
                 padding: const EdgeInsets.only(left: 40),
                 child: Container(
@@ -66,7 +67,7 @@ Widget _paymentWindow(String _address, String _name, String _cost, String _month
           Row(
             children:[
               SizedBox(width: 25),
-              Text('$_cost Р.')
+              Text('6.137 Р')
             ]
           ),
           SizedBox(height: 10),
@@ -82,7 +83,7 @@ Widget _paymentWindow(String _address, String _name, String _cost, String _month
                     style: TextStyle(fontSize:18, fontWeight: FontWeight.bold)
                   ),
                   SizedBox(width: 5),
-                  Icon(Icons.input)
+
                 ],
               )
             ),
@@ -97,13 +98,17 @@ class _PaymentPageState extends State<PaymentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Colors.grey,
       body: Column(
         children: [
           Padding(
             padding: EdgeInsets.only(right: 310, top: 40),
             child: IconButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  NavigationBarScreen()));
+              },
               iconSize: 40,
               icon: Icon(Icons.arrow_back_sharp),
                   ),

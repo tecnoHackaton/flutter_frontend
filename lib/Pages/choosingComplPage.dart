@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_frontend/Pages/navigation_bar.dart';
 
 import '../Classes/logo.dart';
 
@@ -29,14 +30,23 @@ class _ComplsPageState extends State<ComplsPage> {
   Widget _buttonNext(String text, void func()){
     return ElevatedButton(
       onPressed: (){
-        //Navigator.of(context).push();
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const NavigationBarScreen()));
       },
-      // style: ButtonStyle(),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.white
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(text),
-          Icon(Icons.arrow_circle_right_outlined)
+          Text(text,
+          style: TextStyle(
+            color: Colors.black
+          ),),
+          SizedBox(width: 6),
+          Icon(Icons.arrow_circle_right_outlined,
+          color: Colors.black,)
         ],
       ),
     );
@@ -65,7 +75,7 @@ class _ComplsPageState extends State<ComplsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Colors.white,
       body: Column(
         children: <Widget>[
           Logo(),

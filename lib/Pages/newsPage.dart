@@ -14,7 +14,6 @@ class NewsPageScreenState extends State<NewsPageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_frontend/Pages/choosingComplPage.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({Key? key}) : super(key: key);
@@ -60,19 +61,31 @@ class _AuthPageState extends State<AuthPage> {
       _lastNameController.clear();
       final _email = _emailController.text;
       _emailController.clear();
+
     }
 
     Widget _buttonNext(String text, void func()){
       return ElevatedButton(
         onPressed: (){
           _next();
+          Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const ComplsPage()));
         },
-        // style: ButtonStyle(),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
+
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(text),
-            Icon(Icons.arrow_circle_right_outlined)
+            Text(text,
+            style: TextStyle(
+              color: Colors.black
+            ),),
+            SizedBox(width: 6),
+            Icon(Icons.arrow_circle_right_outlined,
+            color: Colors.black,)
           ],
         ),
       );
@@ -117,12 +130,12 @@ class _AuthPageState extends State<AuthPage> {
     }
 
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Colors.white,
       body: Column(
         children: <Widget>[
           _logo(),
           SizedBox(height: 70,),
-          _form('Продолжить,,', _next),
+          _form('Продолжить', _next),
           // _lastName()
         ],
       ),

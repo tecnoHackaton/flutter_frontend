@@ -14,7 +14,6 @@ class ChatPageScreenState extends State<ChatPageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
     );
   }
 }

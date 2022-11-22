@@ -6,7 +6,7 @@
     <string>Это поможет нашему прилоежнию показывать карту</string>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>Это поможет нашему прилоежнию показывать карту</string>
-	<key>CFBundleDevelopmentRegion</key>
+	<key>ыCFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Flutter Frontend</string>
