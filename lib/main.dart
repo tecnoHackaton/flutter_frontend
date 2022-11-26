@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_frontend/Pages/AuthPage.dart';
-import 'package:flutter_frontend/Pages/botHello.dart';
-import 'package:flutter_frontend/Pages/mainPage.dart';
-import 'package:flutter_frontend/Pages/navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
